@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+import fr.pizzeria.model.CategoriePizza;
 import fr.pizzeria.model.Pizza;
 
 public class PizzaMemoDao implements IPizzaDao {
@@ -15,14 +16,14 @@ public class PizzaMemoDao implements IPizzaDao {
 	
 	public void initialisation () {
 		
-		listPizza.add(new Pizza (0 ,"PEP" , "pépéroni" , 12.50)) ;
-		listPizza.add(new Pizza (1 ,"MAR" , "Margherita" , 14.00)) ;
-		listPizza.add(new Pizza (2 ,"REIN" , "La Reine" , 11.50)) ;
-		listPizza.add(new Pizza (3 ,"FRC" , "La 4 Fromage" , 12.00)) ;
-		listPizza.add(new Pizza (4 ,"CAN" , "La Cannibale" , 12.50)) ;
-		listPizza.add(new Pizza (5 ,"SAV" , "La Savoyarde" , 13.00)) ;
-		listPizza.add(new Pizza (6 ,"ORI" , "L'Orientale" , 13.50)) ;
-		listPizza.add(new Pizza (7 ,"IND" , "L'Indienne" , 14.00)) ; 
+		listPizza.add(new Pizza (0 ,"PEP" , "pépéroni" , 12.50 , CategoriePizza.VIANDE)) ;
+		listPizza.add(new Pizza (1 ,"MAR" , "Margherita" , 14.00 , CategoriePizza.SANS_VIANDE)) ;
+		listPizza.add(new Pizza (2 ,"REIN" , "La Reine" , 11.50 , CategoriePizza.VIANDE)) ;
+		listPizza.add(new Pizza (3 ,"FRC" , "La 4 Fromage" , 12.00 , CategoriePizza.SANS_VIANDE)) ;
+		listPizza.add(new Pizza (4 ,"CAN" , "La Cannibale" , 12.50 , CategoriePizza.VIANDE)) ;
+		listPizza.add(new Pizza (5 ,"SAV" , "La Savoyarde" , 13.00 , CategoriePizza.VIANDE)) ;
+		listPizza.add(new Pizza (6 ,"ORI" , "L'Orientale" , 13.50 , CategoriePizza.VIANDE)) ;
+		listPizza.add(new Pizza (7 ,"IND" , "L'Indienne" , 14.00 , CategoriePizza.VIANDE)) ; 
 		
 	}
 	

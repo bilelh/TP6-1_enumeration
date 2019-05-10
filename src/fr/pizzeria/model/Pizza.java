@@ -32,7 +32,6 @@ public class Pizza {
 	}
 	
 	public String toString (CategoriePizza cat) {
-		cat.getCat() ;
 		
 		return cat.getCat() ;
 	}
