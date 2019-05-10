@@ -16,8 +16,6 @@ public class MenuServiceFactory {
 		MenuService modif = new ModifierPizzaService () ;
 		MenuService suppr = new SupprimerPizzaService () ;
 		MenuService choice = null ;
-		
-		//while (user_choice != 99) {
 				
 						// CHOIX 1. AFFICHAGE DE LA LISTE DE PIZZAS
 			if (user_choice == 1) {     

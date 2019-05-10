@@ -17,9 +17,7 @@ public class SupprimerPizzaService extends MenuService {
 		
 			// CHOIX DU CODE PIZZA PAR L'UTILISATEUR
 		System.out.println("Veuillez choisir le code de la pizza à supprimer:  ");
-		
 		String suppr_code = questionUser.nextLine();
-		
 		
 			// EXCEPTION POUR CODE INEXISTANT
 		if(!pizzaDao.pizzaExists(suppr_code)) {
@@ -30,7 +28,5 @@ public class SupprimerPizzaService extends MenuService {
 			// SUPPRESSION DE LA PIZZA
 		pizzaDao.deletePizza(suppr_code) ;
 		
-		
 	}
-
 }

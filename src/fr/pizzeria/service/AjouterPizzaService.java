@@ -32,7 +32,7 @@ public class AjouterPizzaService extends MenuService {
 		System.out.println("3 . Sans Viande ");
 		
 			// L'UTILISATEUR RENSEIGNE LA CATEGORIE
-		System.out.println("Veuillez choisir la categorie de la pizza (en toute lettre):  ");
+		System.out.println("Veuillez choisir la categorie de la pizza (en toute lettre et en respectant les majuscules et minuscules):  ");
 		String catChoice = questionUser.nextLine();
 		
 		CategoriePizza newCat = null  ;
@@ -45,7 +45,6 @@ public class AjouterPizzaService extends MenuService {
 			  }
 		}
 			  
-		
 			// EXCEPTION POUR PIZZA DEJA EXISTANTE
 		if(pizzaDao.pizzaExists(newCode)) {
 			throw new SavePizzaException(" ***************************** Le code de la pizza existe déjà ***************************** ");
@@ -58,11 +57,6 @@ public class AjouterPizzaService extends MenuService {
 			// AJOUT DE LA NOUVELLE PIZZA
 		Pizza newPizza = new Pizza (newCode , newLibelle , newPrix , newCat ) ;
 		pizzaDao.saveNewPizza(newPizza);
-		
-		
-		
-		
-		
 		
 	}
 }

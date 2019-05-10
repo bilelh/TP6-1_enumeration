@@ -9,12 +9,18 @@ public enum CategoriePizza {
 	private String cat;
 
 	private CategoriePizza(String cat) {
+		
 		this.cat = cat;
+		
 	}
+	
 	public String getCat() {
+		
 		return cat;
+		
 	}
 	public String toString() {
+		
 		return getCat();
 	}
 	

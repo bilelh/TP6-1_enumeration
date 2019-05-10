@@ -51,13 +51,17 @@ public class ModifierPizzaService extends MenuService {
 		System.out.println("Veuillez choisir la categorie de la pizza (en toute lettre):  ");
 		String catChoice = questionUser.nextLine();
 		
+			// INITIAISATION D'UNE CategoriePizza
 		CategoriePizza newCat = null  ;
 		
 			/* ON COMPARE LES DIFFERENTES CATEGORIES AU CHOIX DE L'UTILISATEUR 
 			ET INITIALISE LA CATEGORIE SI LE CHOIX EST DISPONIBLE*/
 		for (int i = 0 ; i < CategoriePizza.values().length ; i++){
+			
 			if ( CategoriePizza.values()[i].toString().compareTo(catChoice) == 0) {
+				
 				  newCat = CategoriePizza.values()[i] ;
+				  
 			  }
 		}
 		
@@ -66,13 +70,10 @@ public class ModifierPizzaService extends MenuService {
 			throw new UpdatePizzaException(" ***************************** Cette categorie n'est pas disponible *****************************");
 		}	
 		
-		
 			// MISE A JOUR DE LA PIZZA
 		Pizza newPizza = new Pizza (newCode , newLibelle , newPrix , newCat) ;
 		pizzaDao.updatePizza(modif_code, newPizza);
-			
 		
 	}
-
 }
 
