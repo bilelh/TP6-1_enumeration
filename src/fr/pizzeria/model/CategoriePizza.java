@@ -2,9 +2,9 @@ package fr.pizzeria.model;
 
 public enum CategoriePizza {
 	
-	VIANDE ("Viande"), 
-	POISSON("Poisson"), 
-	SANS_VIANDE("Sans Viande");
+	VIANDE 			("Viande"), 
+	POISSON 		("Poisson"), 
+	SANS_VIANDE 	("Sans Viande");
 	
 	private String cat;
 
@@ -14,8 +14,8 @@ public enum CategoriePizza {
 	public String getCat() {
 		return cat;
 	}
-	public void setCat(String cat) {
-		this.cat = cat;
+	public String toString() {
+		return getCat();
 	}
 	
 
