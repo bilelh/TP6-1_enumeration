@@ -13,7 +13,7 @@ public class ListerPizzaService extends MenuService {
 			
 			Pizza pizza = (Pizza) pizzaDao.findAllPizzas().get(i) ;
 			
-			System.out.println(pizza.id + " _ " + pizza.code + " -> " + pizza.libelle + " ( " + String.format("%.2f" , pizza.prix) + "€ )");
+			System.out.println( " ==> " + pizza.code + " -> " + pizza.libelle + " ( " + String.format("%.2f" , pizza.prix) + "€ )" + "  categorie : " + pizza.cat.toString());
 		
 		}
 		

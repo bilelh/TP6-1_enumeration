@@ -38,13 +38,10 @@ public class PizzeriaAdminConsoleApp {
 		MenuServiceFactory choice = new MenuServiceFactory () ;
 		
 		
-		
 		while (user_choice != 99) {
 			if ((user_choice == 1) || (user_choice == 2) || (user_choice == 3) || (user_choice == 4)) {	
-			
-			
+
 						// APPEL DE LA FACTORY
-				
 				try {
 					
 					choice.factory(user_choice).executeUC(pizza) ;
@@ -55,7 +52,6 @@ public class PizzeriaAdminConsoleApp {
 					
 				}
 				
-				
 						// AFFICHAGE DE LA LISTE DES OPTIONS 
 				System.out.println("***** Pizzeria Administration *****  ");
 				System.out.println("1. Lister les pizzas  ");
@@ -63,10 +59,9 @@ public class PizzeriaAdminConsoleApp {
 				System.out.println("3. Mettre à jour une pizza  ");
 				System.out.println("4. Supprimer une pizza  ");
 				System.out.println("99. Sortir  ");
-				
+						// CHOIX DE L'UTILISATEUR
 				System.out.println("Veuillez faire votre choix");
 				user_choice = questionUser.nextInt();
-			
 			
 			} else {
 				System.out.println("Je n'ai pas compris, Veuillez recommencer ");
@@ -74,7 +69,6 @@ public class PizzeriaAdminConsoleApp {
 				System.out.println("Veuillez faire votre choix");
 				user_choice = questionUser.nextInt();
 			}
-		 
 		}
 			// MESSAGE DE FIN POUR LE CHOIX 99.
 			System.out.println("Aurevoir !!! ");

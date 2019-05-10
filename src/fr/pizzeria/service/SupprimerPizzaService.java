@@ -24,7 +24,7 @@ public class SupprimerPizzaService extends MenuService {
 			// EXCEPTION POUR CODE INEXISTANT
 		if(!pizzaDao.pizzaExists(suppr_code)) {
 			
-			throw new DeletePizzaException(" La pizza à supprimer n'existe pas.");
+			throw new DeletePizzaException(" ***************************** La pizza à supprimer n'existe pas ***************************** ");
 			
 		}
 			// SUPPRESSION DE LA PIZZA
